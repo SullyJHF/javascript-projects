@@ -96,8 +96,6 @@ gulp.task('images', function() {
 gulp.task('nodemon', function () {
   livereload.listen();
 
-  console.log(__dirname);
-
   return nodemon({
     script: outputDir + '/server/index.js',
     env: {
