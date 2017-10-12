@@ -1,6 +1,8 @@
 # Javascript Projects
 
-`cd <project-name> && npm install && npm start`
+```bash
+cd <project-name> && npm install && npm start
+```
 
 goto [localhost:8080](http://localhost:8080)
 
