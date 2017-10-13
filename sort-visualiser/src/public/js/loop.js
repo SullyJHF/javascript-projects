@@ -1,13 +1,13 @@
 export class Loop {
-  constructor(fps=60, tickCb) {
-    this.fps = fps;
+  constructor(ups=60, tickCb) {
+    this.ups = ups;
     this.lastTime = (new Date()).getTime();
     this.tickCb = function () {}
     this.renderCb = function () {}
     this.tick = this.tick.bind(this);
     this.render = this.render.bind(this);
 
-    this.step = 1000 / this.fps;
+    this.step = 1000 / this.ups;
 
     this.frameId = 0;
 
