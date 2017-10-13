@@ -9,6 +9,7 @@ import { ArrayVisualiser } from './array-visualiser';
 import { BubbleSorter } from './bubble-sorter';
 import { SelectionSorter } from './selection-sorter';
 import { InsertionSorter } from './insertion-sorter';
+import { CocktailSorter } from './cocktail-sorter';
 
 
 let display = document.getElementById('display');
@@ -26,6 +27,9 @@ let sorter;
 switch(sortType) {
   case ('bubble'):
     sorter = new BubbleSorter(array);
+    break;
+  case ('cocktail'):
+    sorter = new CocktailSorter(array);
     break;
   case ('selection'):
     sorter = new SelectionSorter(array);

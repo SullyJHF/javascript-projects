@@ -16,6 +16,10 @@ app.get('/bubble', (req, res) => {
   res.render('pages/index', { title: 'Bubble Sort', css: ['main.css'], sortType: 'bubble' });
 });
 
+app.get('/cocktail', (req, res) => {
+  res.render('pages/index', { title: 'Cocktail Sort', css: ['main.css'], sortType: 'cocktail' });
+});
+
 app.get('/selection', (req, res) => {
   res.render('pages/index', { title: 'Selection Sort', css: ['main.css'], sortType: 'selection' });
 });
