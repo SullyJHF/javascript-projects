@@ -3,23 +3,15 @@ import { swap } from './utils';
 export class CocktailSorter {
   constructor(array) {
     this.array = array;
-    this.curr = 0;
-    this.rightStop = array.length - 1;
-    this.leftStop = 0;
-    this.switched = 0;
-    this.dir = 1;
+    this.reset();
     this.done = false;
   }
 
   tick() {
     if (this.done) return;
-    if (this.leftStop >= this.rightStop) {
+    if (this.leftPtr >= this.rightPtr || this.switched > 1) {
       this.done = true;
-      return;
-    }
-
-    if (this.switched >= 2) {
-      this.done = true;
+      this.reset();
       return;
     }
 
@@ -30,15 +22,15 @@ export class CocktailSorter {
 
     this.curr += this.dir;
 
-    if (this.curr + this.dir < this.leftStop) {
-      this.leftStop++;
+    if (this.curr + this.dir < this.leftPtr) {
+      this.leftPtr++;
       this.dir *= -1
       this.length--;
       this.switched++;
     }
 
-    if (this.curr + this.dir > this.rightStop) {
-      this.rightStop--;
+    if (this.curr + this.dir > this.rightPtr) {
+      this.rightPtr--;
       this.dir *= -1
       this.length--;
       this.switched++;
@@ -46,7 +38,8 @@ export class CocktailSorter {
   }
 
   reset() {
-    this.curr = 0;
-    this.length = this.array.length;
+    this.curr = this.leftPtr = this.switched = 0;
+    this.rightPtr = this.array.length - 1;
+    this.dir = 1;
   }
 }

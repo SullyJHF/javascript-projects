@@ -3,8 +3,7 @@ import { swap } from './utils';
 export class InsertionSorter {
   constructor(array) {
     this.array = array;
-    this.rightPtr = 1;
-    this.curr = 0;
+    this.reset();
     this.done = false;
   }
 
@@ -12,6 +11,7 @@ export class InsertionSorter {
     if (this.done) return;
     if (this.rightPtr > this.array.length) {
       this.done = true;
+      this.reset();
       return;
     }
 
@@ -26,6 +26,6 @@ export class InsertionSorter {
 
   reset() {
     this.curr = 0;
-    this.length = this.array.length;
+    this.rightPtr = 1;
   }
 }

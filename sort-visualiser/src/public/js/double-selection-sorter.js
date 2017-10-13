@@ -3,11 +3,7 @@ import { swap } from './utils';
 export class DoubleSelectionSorter {
   constructor(array) {
     this.array = array;
-    this.startPtr = 0;
-    this.curr = this.startPtr;
-    this.min = this.startPtr;
-    this.max = this.startPtr;
-    this.endPtr = this.array.length - 1;
+    this.reset();
     this.done = false;
   }
 
@@ -40,8 +36,8 @@ export class DoubleSelectionSorter {
   }
 
   reset() {
+    this.curr = 0;
     this.startPtr = this.min = this.max = 0;
     this.endPtr = this.array.length - 1;
-    this.curr = 0;
   }
 }

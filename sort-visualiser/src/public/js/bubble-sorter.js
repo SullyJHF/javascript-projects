@@ -3,9 +3,7 @@ import { swap } from './utils';
 export class BubbleSorter {
   constructor(array) {
     this.array = array;
-    this.curr = 0;
-    this.length = array.length - 1;
-    this.swappedCount = 0;
+    this.reset();
     this.done = false;
   }
 
@@ -30,11 +28,14 @@ export class BubbleSorter {
 
     if (this.length <= 0) {
       this.done = true;
+      this.reset();
+      return;
     }
   }
 
   reset() {
     this.curr = 0;
-    this.length = this.array.length;
+    this.length = this.array.length - 1;
+    this.swappedCount = 0;
   }
 }

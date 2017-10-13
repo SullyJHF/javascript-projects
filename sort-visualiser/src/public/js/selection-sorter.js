@@ -3,9 +3,7 @@ import { swap } from './utils';
 export class SelectionSorter {
   constructor(array) {
     this.array = array;
-    this.start = 0;
-    this.curr = this.start;
-    this.min = this.start;
+    this.reset();
     this.done = false;
   }
 
@@ -13,6 +11,7 @@ export class SelectionSorter {
     if (this.done) return;
     if (this.start >= this.array.length - 1) {
       this.done = true;
+      this.reset();
       return;
     }
 
@@ -29,7 +28,8 @@ export class SelectionSorter {
   }
 
   reset() {
-    this.curr = 0;
-    this.length = this.array.length;
+    this.start = 0;
+    this.curr = this.start;
+    this.min = this.start;
   }
 }
