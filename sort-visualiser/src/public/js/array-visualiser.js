@@ -14,6 +14,7 @@ export class ArrayVisualiser {
     for (let i = 0; i < sorter.array.length; i++) {
       ctx.fillStyle = sorter.curr === i ? 'red' : 'white';
       ctx.fillStyle = sorter.min === i ? '#0f0' : ctx.fillStyle;
+      ctx.fillStyle = sorter.max === i ? '#0ff' : ctx.fillStyle;
       let width = WIDTH / sorter.array.length;
       let height = HEIGHT * (sorter.array[i] - min) / range;
       let x = i * width;

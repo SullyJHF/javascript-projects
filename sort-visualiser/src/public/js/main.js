@@ -8,6 +8,7 @@ import {
 import { ArrayVisualiser } from './array-visualiser';
 import { BubbleSorter } from './bubble-sorter';
 import { SelectionSorter } from './selection-sorter';
+import { DoubleSelectionSorter } from './double-selection-sorter';
 import { InsertionSorter } from './insertion-sorter';
 import { CocktailSorter } from './cocktail-sorter';
 
@@ -33,6 +34,9 @@ switch(sortType) {
     break;
   case ('selection'):
     sorter = new SelectionSorter(array);
+    break;
+  case ('double-selection'):
+    sorter = new DoubleSelectionSorter(array);
     break;
   case ('insertion'):
     sorter = new InsertionSorter(array);

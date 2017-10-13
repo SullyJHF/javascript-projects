@@ -24,6 +24,10 @@ app.get('/selection', (req, res) => {
   res.render('pages/index', { title: 'Selection Sort', css: ['main.css'], sortType: 'selection' });
 });
 
+app.get('/double-selection', (req, res) => {
+  res.render('pages/index', { title: 'Double Selection Sort', css: ['main.css'], sortType: 'double-selection' });
+});
+
 app.get('/insertion', (req, res) => {
   res.render('pages/index', { title: 'Insertion Sort', css: ['main.css'], sortType: 'insertion' });
 });
