@@ -6,11 +6,12 @@ import {
 } from './constants';
 
 import { ArrayVisualiser } from './array-visualiser';
-import { BubbleSorter } from './bubble-sorter';
-import { SelectionSorter } from './selection-sorter';
-import { DoubleSelectionSorter } from './double-selection-sorter';
-import { InsertionSorter } from './insertion-sorter';
-import { CocktailSorter } from './cocktail-sorter';
+import { BubbleSorter } from './sorters/bubble-sorter';
+import { SelectionSorter } from './sorters/selection-sorter';
+import { DoubleSelectionSorter } from './sorters/double-selection-sorter';
+import { InsertionSorter } from './sorters/insertion-sorter';
+import { CocktailSorter } from './sorters/cocktail-sorter';
+import { ShellSorter } from './sorters/shell-sorter';
 
 
 let display = document.getElementById('display');
@@ -40,6 +41,9 @@ switch(sortType) {
     break;
   case ('insertion'):
     sorter = new InsertionSorter(array);
+    break;
+  case ('shell'):
+    sorter = new ShellSorter(array);
     break;
   default:
     sorter = new BubbleSorter(array);

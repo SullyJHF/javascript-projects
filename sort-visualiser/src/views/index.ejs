@@ -2,12 +2,12 @@
 <html>
   <head>
     <title><%= locals.title %></title>
-    <script type="text/javascript" src="public/js/bundle.js" defer></script>
+    <script type="text/javascript" src="/js/bundle.js" defer></script>
     <script type="text/javascript">
       let sortType = '<%- locals.sortType %>';
     </script>
     <% for (let sheet of locals.css) { %>
-      <link rel="stylesheet" type="text/css" href="public/css/<%= sheet %>">
+      <link rel="stylesheet" type="text/css" href="/css/<%= sheet %>">
     <% } %>
   </head>
   <body>
