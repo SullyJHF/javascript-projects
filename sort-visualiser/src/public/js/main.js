@@ -1,9 +1,6 @@
 import { Loop } from './loop';
 import { shuffle } from './utils';
-import {
-  WIDTH,
-  HEIGHT
-} from './constants';
+import { WIDTH, HEIGHT } from './constants';
 
 import { ArrayVisualiser } from './array-visualiser';
 import { BubbleSorter } from './sorters/bubble-sorter';
