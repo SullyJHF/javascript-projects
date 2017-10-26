@@ -1,7 +1,7 @@
 {
-  "name": "Base",
+  "name": "Boids",
   "version": "1.0.0",
-  "description": "Base ejs repo that utilises es2015+ features both on the frontend and backend",
+  "description": "Boids example",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node dist/server",
@@ -17,7 +17,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SullyJHF/base-ejs"
+    "url": "https://github.com/SullyJHF/javascript-projects/boids"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
